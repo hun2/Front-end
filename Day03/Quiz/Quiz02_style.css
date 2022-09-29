@@ -1,0 +1,23 @@
+.back {
+    background-color: aquamarine;
+}
+.hang {
+    width: 1500px;
+}
+.table , th, td {
+    width: 700px;
+    height: 50px;
+    text-align: center;
+}
+#money {
+    text-align: right;
+}
+
+.box {
+    width: 110px;
+    height: 20px;
+}
+.load {
+    width: 700px;
+    height: 30px;
+}

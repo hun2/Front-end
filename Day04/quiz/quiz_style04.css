@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+}
+#wrap {
+    background-color: yellow;
+    width: 1200px;
+    margin: auto;
+}
+
+
+.logo {
+    width: 20%;
+    height: 100px;
+    background-color: brown;
+}
+.menu {
+    width: 80%;
+    height: 100px;
+    background-color: red;
+}
+
+.content1 {
+    width: 600px;
+    height: 400px;
+    background-color: pink;
+
+}
+
+.content1 > .article1 {
+    width: 600px;
+    height: 200px;
+    background-color: beige;
+}
+
+.content1 > .article2 {
+    width: 600px;
+    height: 200px;
+    background-color:coral;
+}
+
+.footer_logo1 {
+    width: 20%;
+    height: 80px;
+    background-color: lightcoral;
+}
+
+.copyright {
+    width: 60%;
+    height: 80px;
+    background-color: antiquewhite;
+    font-style: italic;
+
+}
+.footer_logo2 {
+    width: 20%;
+    height: 80px;
+    background-color: lightcoral;
+}
+
+.flex {
+    display: flex;
+}
+
+

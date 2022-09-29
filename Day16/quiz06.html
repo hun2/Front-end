@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<html>
+
+
+<head>
+    <title>111번가</title>
+    <meta charset="utf-8">
+    <!-- 제이쿼리 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <!-- 부트 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="./quiz06_style.css">
+
+    <!-- js -->
+    <script>
+        
+        $(document).ready(function(){
+            $("#domain").hide();
+            $("#id4").hide();
+            // alert("테스트");
+
+
+            $("input[name=chk_clause]").on("change" , function(){
+
+                $("#agree").toggleClass("agree_change", $("input[name=chk_clause]:checked").length === $("input[name=chk_clause]").length);
+
+            })
+            
+
+
+            $("#agree").on ("click" ,  function(){
+
+
+                //눌렀을 때 체크다 되는것
+                
+
+                //만약 체크가 되어있다면 한번 더 누르면 해제
+                //조건 세개약관이 다 동의가 되어있다면 해제되야함.
+                if ( $("input[name=chk_clause]:checked").length === $("input[name=chk_clause]").length) {
+                    $("input[name=chk_clause]").prop("checked", false);
+                    
+                } else {
+                    $("input[name=chk_clause]").prop("checked", true);
+                }
+                $("#agree").toggleClass("agree_change", $("input[name=chk_clause]:checked").length === $("input[name=chk_clause]").length);
+                $(this).blur()
+            })
+
+
+            //문제 6번
+            $("#id").on ( "keyup" , function(){
+
+                if ( $("#id").val().length <= 4 ) {
+                    $("#id4").show();
+                } else {
+                    $("#id4").hide();
+                }
+
+            })
+
+            //문제 5번
+            $("#domain-list").on("change" , function(){
+                
+                if ( $(this).val() == "직접입력") {
+                    $("#domain-list").hide();
+                    $("#domain").show();
+                }
+            })
+
+
+            
+            $("#join").on("click" , () => {
+                
+                const $id = $('#id')
+                const $name = $("#name")
+                const $email = $("#email")
+                const $password= $("#password")
+                const $passwordConfirm = $("#passwordConfirm")
+
+
+                if (!$id.val().length) {
+                    alert("아이디를 입력해주세요");
+                    $id.focus();
+                } else if (!$name.val().length) {
+                    alert("이름을 입력해주세요");
+                    $name.focus();
+                } else if (!$email.val().length) {
+                    alert("이메일을 입력해주세요");
+                    $email.focus();
+                    
+
+                } else if ( $("#domain-list").val() === "직접입력" && !$("#domain").val().length) {
+                    alert("직접입력값이 아무것도 없습니더ㅏ.");
+                } else if (!$password.val().length) {
+                    alert("비밀번호 입력해주세요");
+                    $password.focus();
+                } else if (!$passwordConfirm.val().length) {
+                    alert("비밀번호확인 입력해주세요");
+                    $passwordConfirm.focus();
+
+                } else if ($password.val() !== $passwordConfirm.val() ) {
+
+                    alert("비밀번호가 틀립니다");
+                } 
+                 
+                
+                else {
+            
+
+                    
+                    const number = "아이디 :" + $('#id').val();
+                    const number1 = "이름 :" + $('#name').val();
+                    const number2 = "이메일 :"+ $('#email').val() + $("#aa").text() +($("#domain-list").val() === '직접입력' ? $("#domain").val() : $("#domain-list").val());
+                    alert(number+ '\n' +
+                    number1 + "\n" +
+                    number2
+                    );
+
+                }
+                
+
+
+               
+
+            })
+
+
+            
+
+
+        })
+
+    </script>
+</head>
+
+
+<body>
+    <div id="all">
+
+
+
+        <header>
+            <div class="head">
+                <sapn id="headtitle">111번가</sapn>
+                <hr>
+            </div>
+            
+        </header>
+
+        <section class="d-flex justify-content-center">
+            <div class="body">
+
+                <h3>111번가 회원가입을 시작합니다!</h3>
+                <h3>약관에 동의해주세요</h3>
+                <input type="button" value="모두동의" id="agree" class="agree form-control">
+                <span id="agree_check"> 필수 및 선택 정보를 한번에 동의할 수 있습니다.</span>
+
+                <div class="form-check">
+                    <input class="form-check-input" name="chk_clause" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      111번가 서비스 이용약관 동의 (필수)
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" name="chk_clause" type="checkbox" value="" id="flexCheckChecked">
+                    <label class="form-check-label" for="flexCheckChecked">
+                        111번가 개인정보 수집 및  이용동의 (필수)
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" name="chk_clause" type="checkbox" value="" id="flexCheckChecked1">
+                    <label class="form-check-label" for="flexCheckChecked1">
+                        111번가 광고성 정보 수신 (선택)
+                    </label>
+                </div>
+                <br>
+
+
+                <h2 id="ex1">가입 정보 입력</h2> <br>
+                <span id="ex2">11번가의 다양한 혜택을 누려보세요!!!</span><br>
+                <div id="ex3" class="test1">아이디</div>
+                <input type="text" class="hi form-control" id="id">
+                <span id="id4">아이디를 4자 이상 입력하세요</span>
+                <div class="test1">비밀번호</div>
+                <input type="password" class="hi form-control" id="password">
+                <div class="test1">비밀번호 확인</div>
+                <input type="password" class="hi form-control" id="passwordConfirm">
+                <div class="test1"> 이름</div>
+                <input type="text" class="hi form-control" id="name">
+                <div class="test1"> 이메일</div>
+                
+                <div class="d-flex justify-content-between">
+                    <input type="text" class="hello form-control" id="email">
+                    <span id="aa">@</span> 
+                    <select class="box" id="domain-list">
+                        <option value="naver.com">naver.com</option>
+                        <option value="google.com">google.com</option>
+                        <option value="hanmail.net">hanmail.net</option>
+                        <option value="nate.com">nate.com</option>
+                        <option value="kakao.com">kakao.com</option>
+                        <option value="직접입력">직접입력</option>
+                    </select>
+                    <input type="text" id="domain">
+                </div>
+
+                <input type="button" class="haha form-control" value="가입하기" id="join"> 
+                
+
+
+            </div>
+        </section>
+        <hr>
+        <footer>
+            <div class="foot"> Copyright © marondal 2022 </div>
+        </footer>
+    </div>
+</body>
+
+
+
+
+
+</html>

@@ -1,0 +1,31 @@
+.number {
+    font-size: 50px;
+}
+.table {
+    
+    font-weight: bold;
+    
+}   
+.table, th, td {
+    border: 1px solid #000; border-collapse: collapse;
+    vertical-align: top;
+    padding: 10px;
+}
+td {
+    width: 1300px;
+    height: 100px;
+}
+th {
+    height: 30px;
+}
+.red {
+    color: red;
+}
+
+.table > thead {
+    text-align: center;
+}
+
+.today {
+    background-color: bisque;
+}

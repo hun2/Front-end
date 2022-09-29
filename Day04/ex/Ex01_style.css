@@ -1,0 +1,50 @@
+#div1 {
+    font-size: 50px;
+    background-color: yellow;
+    text-align: center;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+
+}
+
+
+
+#div2 {
+    background-color: coral;
+
+}
+#div3 {
+    background-color: darkblue;
+}
+
+#div4 {
+    background-color: palevioletred;
+}
+
+#div5 {
+    background-color: black;
+}
+
+.box-size-100 {
+    width: 100px;
+    height: 100px;
+}
+
+/* justify -contend : 수평정렬 등등 정렬기준법이있다. */
+
+.flex {
+    display: flex; background-color: yellow; justify-content: space-between
+}
+
+.text1 {
+    background-color: olive;
+    margin-right: 100px;
+    padding: 10px;
+}
+.text2{
+    background-color: lightslategrey;
+    width: 200px;
+    height: 200px;
+    display: block;
+    
+}

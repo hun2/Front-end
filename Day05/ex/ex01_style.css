@@ -1,0 +1,46 @@
+#wrap {
+    /* 가운데 정렬시 margin auto */
+    margin: auto;
+    width: 1200px;
+    height: 1000px;
+    background-color: pink;
+}
+header {    
+    height: 100px;
+    background-color: red;
+}
+nav {
+    height: 50px;
+    background-color: coral;
+}
+.contents {
+    height: 450px;
+    background-color: yellow;
+    display: flex;
+}
+
+.contents > .left {
+    width: 70%;
+    background-color: lawngreen;
+    height: 450px;
+}
+.contents >.left > .at1 {
+    width: 700px;
+    background-color: darkcyan;
+    height: 200px;
+    margin-top: 15px;
+    margin-left: 60px;
+}
+
+.contents > .right {
+    width: 30%;
+    background-color: blueviolet;
+    height: 450px;
+}
+
+
+
+footer {
+    height: 200px;
+    background-color: green;
+}

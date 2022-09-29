@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title> 예제 2</title>
+    <script>
+
+        //반복문 사용
+        //기본 for 문 . 0 ~ 4
+
+        for (let i = 0; i < 5; i++) {
+            document.write(i + "" ); //문서(브라이저)에 출력된다. 
+            //줄바꿈 하고 싶으면 <br> 을 써주면 된다. 
+        }
+        
+
+
+        //배열 (array)
+        let arr = [10, 20, 30, 40];
+        
+
+        arr.push(50);
+        arr.push(60);
+        document.write(arr);
+
+
+        //배열의 요소만큼 인덱스를 얻는다.
+        for ( let idx in arr) { // arr의 인덱스를 idx 에 넣는거라 생각하셈. 
+            console.log("index:" + idx + "ㅡㅡㅡㅡ" + arr[idx]);
+        }
+
+        // 배열의 값을 순회하는 법.
+        for ( let value of arr) {
+            console.log("값:" + value);
+        }
+
+        // {"키" = "값"} => 자바                 {"키" : "값"} => js
+        //dictionary (JAVA의 map과 비슷 ) - key -value 쌍으로 이루어진 구조
+        let scoreInfo = {"subject" : "국어", "score" : 98, "rank" : 3};
+        console.log(scoreInfo);
+
+        //비어있는 dictionary 에 담기
+
+        let person = {};
+        person["name"] = "김기훈";
+        person["age"] = "33";
+        person["gender"] = "남자";
+        console.log(person);
+
+        // key로 value 접근하기
+        console.log("이름:" + person["name"]);
+        console.log("이름:" + person.name);
+        console.log("나이:" + person["age"]);
+        console.log("이름:" + person.age);
+        console.log("성별:" + person["gender"]);
+        console.log("성별:" + person.gender);
+        
+
+        //같은 키의 값을 넣기 => 즉 수정됨.
+        person["age"] = 33 + 1;
+        console.log(person);
+
+        // 키로 값 삭제하기
+        delete person["gender"];
+        console.log(person);
+
+
+        //특정 키가 존재하는 여부 확인
+        if ( "gender" in person ) {
+            console.log("나이 정보가 존재합니다."); 
+        } else {
+            console.log("나이 정보가 없습니다.");
+        }
+
+        // dictionary 요소 하나하나 접근하기 (반복문으로)
+
+        let keys = Object.keys(person);
+        console.log("keys: "+ keys);
+        for ( let key of keys) {
+            console.log(key + ":" + person[key]);      // name : 김기훈
+            // console.log(key + ":" + person.name);     
+
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+
+</html>

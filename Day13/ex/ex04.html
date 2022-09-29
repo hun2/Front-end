@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+
+<html>
+
+<head>
+    <title> Datepicker</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            //날짜를 선택할 수 있는 창이 띄워진다.
+            $("#datepicker").datepicker();
+            
+            //옵션
+            $("#datepickerOption").datepicker({
+
+                dateFormat : "yy-mm-dd" // 연 월 일 형식으로 나타내고 싶을때
+                , changeMonth : true // 월을 셀렉트로 선택할 수 있게 하는 옵션
+                , changeYear : true // 년을 셀렉트로 선택할 수 있게 하는 옵션
+                , showAnim : "fadeIn" // 애니메이션 효과 (펼쳐지는 ) 
+                // 애니메이션 효과 slide, fadeIn, clip 등등 있다.
+
+            });
+            
+
+            //이벤트 (창이 뜨기전 창이닫힌 후 등등) => 하기전에 한후 처리해야하는 것이 있을때 써먹을수 있음.
+            $("#datepickerEvent").datepicker({
+
+                beforeShow : function(input){ // 달력이 뜨기전에 먼저 행동되는 함수
+                    alert("피커가 열리기 전 호출");
+                }
+                , onSelect : function(dateText){ // 날짜가 선택 됬을때 호출되는 함수
+                    // alert("선택된 날짜:" + dateText);
+                }
+                , onClose : function(dateText){ //날짜가 선택되거나 , 여백을 클릭해서 닫혔을 때
+                    //둘다 호출되는 함수
+                    alert("데이트 피커가 닫혔다.");
+                }
+            })
+
+
+
+            
+
+        })
+    </script>
+
+
+</head>
+
+<body>
+    <p>
+        <span> 날짜 선택 : </span>
+        <input type="text" id="datepicker">
+    </p>
+    <p>
+        <span> 날짜 선택(옵션) :</span>
+        <input type="text" id="datepickerOption">
+    </p>
+    <p>
+        <span> 날짜 선택(이벤트) :</span>
+        <input type="text" id="datepickerEvent">
+    </p>
+
+</body>
+
+</html>

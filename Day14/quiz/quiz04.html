@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title> 행사 일정</title>
+
+    
+    <!-- jquery : 우리, bootstrap, datepicker -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <!-- bootstrap -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+
+    <!-- datepicker -->
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <style>
+        #title {
+            font-weight: bold;
+        }
+        #body {
+            width: 530px;
+        }
+        #text {
+            margin-top: 10px; width: 530px;
+            height: 30px;
+            border-color: lightgrey;
+            
+        }
+        #text1 {
+            margin-left: 10px;
+            width: 200px;
+            border-color: lightgrey;
+        }
+
+        #text2 {
+            margin-left: 10px;
+            width: 200px;
+            border-color: lightgrey;
+        }
+        #close {
+            margin-left: 10px;
+        }
+        .btn {
+            width: 530px;
+            margin: auto;
+            display: block;
+            background-color: darkturquoise;
+            color: white;
+        }
+       .d-flex {
+        display: flex;
+       }
+    </style>
+
+    <script>
+
+
+        $(document).ready(function(){
+
+
+            //모든 데이트 피커에 적용시 
+            $.datepicker.setDefaults({
+                //여기다가 넣으면 둘다 적용됨.
+            })
+
+
+            $("#text1").datepicker({
+
+                dateFormat: 'yy-mm-dd'
+                , monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월']
+                , dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'] //요일을 한글로 변경
+                , minDate : 0 
+                , showButtonPanel : true // 오늘 버튼 노출 시 설정
+                , currentText : "오늘 날짜"
+                , closeText : "닫기"
+                , onClose : function(selectedDate) {
+
+                    $("#text2").datepicker( "option", "minDate", selectedDate );
+                    } 
+
+            });
+
+            $.datepicker._gotoToday = function(id) { 
+                $("#text1").datepicker('setDate', new Date()).datepicker('hide').blur(); 
+            };
+
+
+            $("#text2").datepicker({
+
+                dateFormat: 'yy-mm-dd'
+                , monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월']
+                , dayNames: ['일', '월', '화', '수', '목', '금', '토']
+                , dayNamesShort: ['일', '월', '화', '수', '목', '금', '토']
+                , dayNamesMin: ['일', '월', '화', '수', '목', '금', '토']
+                // , minDate : "+1D"
+                , onClose : function(selectedDate) {
+
+                    $("#text1").datepicker( "option", "MaxDate", selectedDate );
+                }
+
+            });
+                
+        })
+    </script>
+
+
+
+
+
+
+
+</head>
+
+<body>
+    <div id="body">
+        <h1 id="title"> 행사 일정 입력</h1>
+        행사 제목 <br>
+        <input type="text" id="text" class="form-control form-control-lg"> <br><br>
+
+        <span>시작일</span> <input type="text" id="text1"> 
+        <sapn id="close">종료일</sapn> <input type="text" id="text2"> <br><br>
+        <button type="submit" class="btn" value="저장">저장</button>
+
+
+        <hr>
+
+
+        <div class="d-flex">
+            <span> 시작일</span>
+            <input type="text" class="form-control col-4">
+            <span> 종료일</span>
+            <input type="text" class="form-control col-4">
+        </div>
+
+        <button type="button" class="btn btn-info">저장</button>
+    </div>
+</body>
+</html>

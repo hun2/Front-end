@@ -1,0 +1,120 @@
+#wrap {
+    height: 1000px;
+    width: 1000px;
+    margin: auto;
+}
+
+
+.test {
+    display: flex;
+    justify-content:  space-between; 
+    align-items: center;
+    
+}
+
+.test1 {
+    color: cadetblue;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.test2 {
+
+    font: 20px;
+    margin-top: 40px;
+    color: cadetblue;
+    
+}
+
+.test2 :hover {
+    color: cadetblue;
+}
+
+.test3 {
+    font: 20px;
+    margin-top: 40px;
+    color: cadetblue;
+
+}
+.test3 :hover {
+    color: cadetblue;
+}
+
+.test4 {
+    font: 20px;
+    margin-top: 40px;
+    color: cadetblue;
+}
+
+.test4 :hover {
+    color: cadetblue;
+}
+.test5 {
+    font: 20px;
+    margin-top: 40px;
+    color: cadetblue;
+}
+
+.test5 :hover {
+    color: cadetblue;
+}
+
+.section {
+    height: 500px;
+    display: flex;
+}
+
+
+.section1 {
+    width: 50%;
+    height: 500px;
+    background-color: green;
+}
+
+.section2 {
+    width: 50%;
+    height: 500px;
+    background-color: white
+}
+
+.section4 {
+    font-size: 40px;
+}
+
+.section5 {
+    font-size: 30px;
+    color: cadetblue;
+    font-weight: bold;
+}
+
+.section6 {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.footer {
+    
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+
+.footer1 {
+    width: 20%;
+    
+    font-size: 30px;
+}
+
+.footer2 {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+.footer3 {
+    width: 20%;
+    
+}

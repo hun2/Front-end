@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title> 예제3</title>
+    <script>
+    //String
+        let text = "I must do what i want to do."
+
+        //문자열의 길이를 알아내는 법 length > 함수가 아님!!
+        console.log(text.length);
+
+        //charAt : n번째의 인덱스의 문자 반환
+        console.log(text.charAt(3));
+
+
+        //indexof : 특정 문자가 어느 인덱스에 있는 지 반환 => 중복시 첫번째 인덱스 반환됨.
+        console.log(text.indexOf("t"));
+        //없는 문자일때는 -1반환됨.
+        console.log(text.indexOf("b")); // > -1 나옴
+
+
+        // includes : 포함이 되어있는지 확인  > 있으면 true , 없으면 false 
+
+        console.log(text.includes("p"));
+
+        // replace : 문자를 다른 문자로 바꾸는 것 => 처음 나타난 한개만 바꿔준다.
+
+        console.log(text.replace("I","You"));  // 새로운 문장을 리턴값으로 줌 
+
+        // 정규 표현식 regular expression  으로 해야 전체 다 바꿔줌 
+        console.log(text.replace(/I/g , "You"));
+
+
+
+    </script>
+</head>
+
+
+
+<body></body>
+
+</html>

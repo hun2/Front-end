@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+
+<html>
+
+<head>
+    <title>행사 일정</title>
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+
+    <script>
+
+        $(document).ready(function(){
+
+            $.datepicker.setDefaults({
+                dateFormat: 'yy-mm-dd', //날짜 형식
+                prevText: '이전 달', // 한국어 패치
+                nextText: '다음 달', // 한국어 패치
+                monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+                monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+                dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+                dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+                dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+                showMonthAfterYear: true, //
+                yearSuffix: '년', 
+                changeYear : true, // 년 변경 옵션
+                minDate : 0, // 과거 일자 비활성화 
+            });
+            
+
+
+            $("#start").on("click", function(){
+
+                $("#start").datepicker({
+
+
+
+
+                });
+            })
+
+
+            $("#end").on("click", function(){
+
+
+                $("#end").datepicker({
+
+
+
+                })
+            })
+
+
+
+
+
+        })
+
+
+    </script>
+
+    <style>
+        .text1 {
+            width: 520px;
+            height: 30px;
+            margin-top: 10px;
+        }
+        .text2 {
+            width: 200px;
+            height: 30px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <h1> 행사 일정 입력</h1>
+    행사 제목 <br>
+    <input type="text" class="text1"> <br><br>
+    시작일
+    <input type="text" class="text2" id="start">
+    종료일
+    <input type="text" class="text2" id="end">
+</body>
+
+</html>

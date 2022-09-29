@@ -1,0 +1,124 @@
+body {
+    width: 1200px;
+    min-height: 1000px;
+
+}
+
+
+
+#pension_Name {
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 45px;
+}
+
+
+.menu {
+    height: 40px;
+    background-color: chocolate;
+    
+}
+
+
+
+.nav-item{
+    font-weight: bold;
+}
+
+
+
+section {
+    height: 700px;
+}
+
+#section_body {
+    height: 400px;
+    background-color: red;
+    
+}
+
+
+#article {
+    height: 300px;
+    display: flex;
+    
+    
+    width: 1200px;
+}
+
+#online {
+    width: 400px;
+    font-size: 50px;
+    
+    padding: 70px;
+    background-color: saddlebrown;
+    color: white;    
+}
+
+#check {
+    width: 500px;
+    background-color: burlywood;
+    padding: 20px;
+}
+
+
+#check_check {
+    font-size: 25px;
+    color: white;
+    
+}
+
+.label {
+    margin-left: 20px;
+    color: white;
+}
+
+.check_check {
+    display: flex;
+    align-items: center;
+}
+.hi {
+    margin-left: 20px;
+    margin-top: 10px;
+    width: 280px;
+}
+
+.check_last {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+    margin-right: 80px;
+}
+
+
+#ask {
+    width: 300px;
+    font-size: 30px;
+    background-color: saddlebrown;
+    color: white;
+    padding: 70px;
+    font-weight: bold;
+
+}
+
+
+.test {
+    background-color: black;
+}
+
+
+#test10 {
+    color: white;
+}
+
+#test11 {
+    color: white;
+}
+
+.foot {
+    font-size: 10px;
+    color: darkgray;
+    padding: 10px
+}

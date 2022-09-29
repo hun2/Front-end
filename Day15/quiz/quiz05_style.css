@@ -1,0 +1,46 @@
+#all {
+    width: 2000px;
+}
+
+
+header {
+    height: 100px;
+    background-color: rgb(37, 34, 34);
+    
+}
+
+#test {
+    font-size: 30px;
+    color: white;
+    line-height: 100px;
+    vertical-align: middle;
+    font-weight: bold;
+}
+
+section {
+    min-height: 400px;
+    padding-top: 20px;
+    
+}
+
+
+#test1 {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+footer {
+    height: 100px;
+    height: 100px;
+    background-color: lightgrey;
+}
+
+
+
+#text4 {
+    padding-top: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    color: darkgray;
+}
+

@@ -1,0 +1,38 @@
+body {
+    width: 1500px;
+    height: 1000px;
+    margin: auto;
+}
+
+header {
+    width: 1500px;
+    height: 200px;
+}
+
+.header1 {
+    width: 20%;
+    height: 200px;
+
+}
+
+.header2 {
+    width: 80%;
+    height: 200px;
+}
+
+.section {
+    width: 1500px;
+    height: 500px
+}
+
+
+.footer1 {
+    width: 20%;
+    height: 100px;
+}
+
+.footer2 {
+    width: 80%;
+    height: 100px;
+
+}

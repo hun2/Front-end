@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+
+
+<html>
+
+<head>
+    <title> 내부 스타일시트 적용하기</title>
+    <!-- 문자열 인코딩 종류 -->
+    <meta charset="utf-8">
+
+    <!-- html 문서 '내' 에 스타일시트 정의  >> 좋은 구조는 아니라고 함.-->
+    <style>
+        .hello {
+            color: red;
+            text-align: center;
+            font-size: 100px;
+            
+        }
+
+        .test {
+            color: aqua;
+            text-align: center;
+            font-size: 30px;
+
+        }
+
+
+
+        /* 문서 전체에 효과를 주는 법 >>>>>>>>>>> * 하고 {} 하면됨. */
+        * {
+            color:crimson;
+            text-align: center;
+        }
+
+
+        /* 태그에 꾸미기 효과 주기 */
+        h2 {
+            color: blue;
+            text-align: center;
+        }
+
+        body {
+            background-color: yellow;
+            background-image: url(http://file3.instiz.net/data/cached_img/upload/2020/06/29/5/e87dfde0f7754bb7250f4114d6027839.jpg);
+            background-size: cover;
+        }
+        span {
+            color: forestgreen;
+            font-size: 100px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        a {
+            /* text-decoration은 기본적으로 글씨밑줄 없앨때 쓰인다. none */
+            text-decoration: none;
+            text-align: center;
+            font-size: 50px;
+            color: aliceblue;
+        }
+
+        /* id에 꾸미기 효과주기  # 으로 불러오면 된다.*/
+        #test1 {
+            color: darkorange;
+            font-size: 40px;
+        }
+        #test2 {
+            color: black;
+            font-size: 35px;
+            font-style: italic;
+        }
+        .test3 {
+            background-color: hotpink;
+        }
+
+        #test3 {
+            color: yellow;
+            font-size: 40px;
+        }
+        .test4 { 
+            color: #fff;
+
+        }
+    </style>
+
+
+
+</head>
+
+
+
+<body>
+
+    <h1 class="hello"> 안녕하세요</h1>
+    <h3 class="test"> 스타일 시트 내용이 적용된 제목 3입니다.</h3>
+    <h2> 테스트 할 문장요 </h2>
+
+    <!-- 글씨를 담는 태그 > 즉 원하는 글씨만 색변경이나 설정값 변경할때 감싸는 방법임. -->
+    <span> 스팬태그</span> <br><br>
+
+    <!-- anchor 태그 -->
+    <a href="https://www.naver.com"> 네이버로 갑니다~</a> <br>
+
+
+
+    <!-- id 속성: 태그에 '유일한 이름' 을 지정해준다(중복 절대안됌) -->
+    <span id="test1"> 글씨 효과를 개별로 주고싶다면???????</span> <br>
+    <span id="test2"> 이것도 테스트 입니다요~ 하호ㅓ호호호</span> <br>
+
+    <!-- class 속성 -->
+    <span class="test3"> 글자 배경이 노란색으로 칠해진다요~</span> <br><br>
+    <span id="test3" class="test3"> text3 효과와 글자 배경이 노란색으로 칠해주는 효과</span> <br>
+
+    <!-- 클래스는 중첩으로 사용가능  -->
+    <span class="test4 test3" > 글자색 흰색, 배경색 노란색</span><br>
+
+    <!-- 인라인 스타일 주기 하지말라함. (하면 안되는데 왜 알려주는거지?) -->
+    <span style="color: #000;"> 안녕하세요 </span> <br>
+    <span class="test4" style="color: lightgreen;"> 하이 </span>
+
+</body>
+
+
+
+</html>

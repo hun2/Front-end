@@ -1,0 +1,94 @@
+#wrap {
+    width: 1000px;
+    height: 1000px;
+   
+    margin: auto;
+    
+}
+
+
+.header1 {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+
+.title {
+    font-size: 50px;
+    color: red;
+}
+
+.test {
+    display: flex;
+    align-items: flex-end;
+}
+
+.input-group {
+    width: 500px;
+    margin-top: 20px;
+}
+
+
+.test1 {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+.test2 {
+    color: black;
+}
+
+.test2:hover {
+    color: black;
+}
+
+.haha {
+    display: flex;
+    margin-top: 20px;
+    
+}
+
+.section {
+    width: 20%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.o1 {
+    height: 50px;
+}
+
+.section_back:hover {
+    background-color: dimgray;
+}
+.o2 {
+    height: 50px;
+}
+
+.o3 {
+    height: 50px;
+}
+
+.o4 {
+    height: 50px;
+}
+.aside {
+    width: 80%;
+}
+
+.card-body {
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.card-title {
+    font-size: 12px;
+    font-weight: bold;
+}
+.card-text {
+    font-size: 10px;
+    color: gray;
+}

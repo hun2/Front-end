@@ -1,0 +1,85 @@
+#wrap {
+    margin: auto;
+    width: 1000px;
+    height: 1000px;
+    
+}
+
+.header {
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+}
+
+.input_tag {
+    width: 300px;
+    height: 10px;
+    margin-top: 60px;
+}
+
+#button-addon2 {
+    background-color: lightgray;
+    font-size: 14px;
+    border-style: hidden;
+}
+
+.title {
+    text-align: center;
+}
+
+.titlename {
+    font-size: 45px;
+    
+}
+
+.titlename2 {
+    font-size: 15px;
+    font-weight: bold;
+
+}
+
+
+.join {
+    margin-top: 75px;
+    justify-content: space-between;
+    font-size: small;
+}
+
+.join22 {
+    color: gray;
+}
+.join22 :hover {
+    color: gray;
+}
+
+.bestsell {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+
+
+.real {
+    
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.price {
+    text-decoration: line-through;
+}
+
+
+.last {
+    margin-top: 20px;
+    color: dimgray;
+    text-align: center;
+    font-size: 12px;
+}

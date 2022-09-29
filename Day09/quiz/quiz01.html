@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+
+<html>
+
+<head>
+
+
+    <script>
+        //1번 
+        const number = 5;
+        const number1 = 8;
+        // alert(number + " X " + number1 + " = "  + (number*number1));
+
+
+        //2번
+        const number2 = 12;
+        const number3 = 34;
+
+        console.log(number2+""+number3);
+        console.log(String(number2)+number3); //형변환 해버리면 된다응~!
+        
+
+
+        //3번
+        const number4 = 10;
+        const number5 = "10";
+
+        if ( number4 === number5) {
+            console.log("두 값은 같다");
+        } else {
+            console.log ("두 값은 같지 않다.");
+        }
+
+        if ( number4 !== number5 ) {
+            console.log("두 값은 같지 않다.")
+        }
+
+        //4번 
+        let score;
+        const socre1 = null;
+        
+        if ( score == socre1) {
+            console.log(true);
+        }
+
+        if (score === undefined && socre1 === null) {
+            console.log(true);
+        }
+    
+        //5번
+        let userId;
+        if ( userId == null) {
+            console.log("비정상적인 접근입니다");
+        } else if (userId == "") {
+            console.log("비정상적인 접근입니다");
+        } else {
+            console.log("안녕하세요." + userId + "님");
+        }
+        
+
+        //6번
+        const word1 = "hello";
+        if ( word1 == "hello") {
+            var word2 = " world";
+        }
+        
+        console.log(word1 + word2);
+
+
+
+    </script>
+
+</head>
+
+
+<body>
+
+
+</body>
+
+
+
+</html>

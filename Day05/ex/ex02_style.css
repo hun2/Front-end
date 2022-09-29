@@ -1,0 +1,35 @@
+#wrap {
+    height: 1000px;
+
+}
+header {
+    height: 100px;
+}
+
+nav {
+    height: 50px;
+}
+.contents {
+    height: 300px;
+}
+
+footer {
+    height: 150px;
+}
+
+
+
+.contents > .left {
+    height: 300px;
+
+}
+.contents > .right {
+    height: 300px;
+}
+
+.haha {
+    background-color: bisque;
+}
+.haha2 {
+    background-color: blue;
+}

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+
+
+<html>
+    
+
+<head>
+    <title>통나무펜션</title>
+    <meta charset="utf-8">
+     <!-- 제이쿼리 -->
+     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+     <!-- 부트 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+ 
+     <!-- css -->
+     <link rel="stylesheet" type="text/css" href="./quiz07_style.css">
+
+     <!-- datepicker -->
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <script>
+
+        $(document).ready(function(){
+
+            $("#date").hide();
+            $("#phonenumber").hide();
+      
+            //1번 >> 코드가 영 비효율적인거 같습니다 ㅠㅠ 
+            $("#nav_self").on("mouseenter", function(){
+
+
+                $("#nav_self").toggleClass("test");
+
+                $("#nav_self").on("mouseleave" , function(){
+
+                    $("#nav_self").removeClass("test");
+                })
+
+            })
+
+            $("#nav_look").on("mouseenter", function(){
+
+
+                $("#nav_look").toggleClass("test");
+
+                $("#nav_look").on("mouseleave" , function(){
+
+                    $("#nav_look").removeClass("test");
+                })
+
+            })
+            $("#nav_say").on("mouseenter", function(){
+
+
+                $("#nav_say").toggleClass("test");
+
+                $("#nav_say").on("mouseleave" , function(){
+
+                    $("#nav_say").removeClass("test");
+                })
+
+            })
+
+            $("#nav_commutiy").on("mouseenter", function(){
+
+
+                $("#nav_commutiy").toggleClass("test");
+
+                $("#nav_commutiy").on("mouseleave" , function(){
+
+                    $("#nav_commutiy").removeClass("test");
+                })
+
+            })
+
+
+
+            //2번
+
+            $("input[name=person]").on("change", function(){
+
+                let value = $("input[name=person]:checked").val();
+                //비회원 일때 
+                if ( value == "notjoinPerson") {
+                    $("#test10").text("　　이름");
+                    $("#test11").text("전화번호")
+                    $("#passoword").hide();
+                    $("#phonenumber").show();
+                    $("#date").show();
+                    $("#datebox").datepicker({
+                        dateFormat: "yy-mm-dd"
+                        , dayNamesMin: ['일', '월', '화', '수', '목', '금', '토']
+                        , monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월']
+                        , minDate : "0"
+                        ,
+                    })
+                } else {
+                    $("#date").hide();
+                    $("#test10").text("    　아이디");
+                    $("#test11").text("비밀번호")
+                    $("#passoword").show();
+                    $("#phonenumber").hide();
+                }
+            })
+
+
+
+
+
+            //3번
+            $("#find").on("click", function(){
+                let value = $("input[name=person]:checked").val();
+                //비 회원일경우.
+                if ( value == "notjoinPerson") {
+                
+                    if ($("#id").val().trim().length == 0 ) {
+                        alert("이름를 입력해주세요;");
+                        $("#id").focus();
+                        return;
+                    }  if ($("#phonenumber").val().length == 0) {
+                        alert("전화번호를 입력해주세요");
+                        $("#phonenumber").focus();
+                        return;
+
+                    } if ( $("#phonenumber").val().substring(0,3) !== "010") {
+                        alert("010 으로 시작하는 번호만 입력 가능합니다.");
+                        return;
+                    } else {
+                        alert("이름 :" +  $("#id").val() + "\n" +
+                            "핸드폰 번호 :" + $("#phonenumber").val() + "\n"+
+                            "예약 날짜 :" + $("#datebox").val()
+                        );
+                    }
+                
+
+                } // 회원일 경우 
+                else  {
+                    if ($("#id").val().trim().length == 0 ) {
+                        alert("아이디를 입력해주세요;");
+                        $("#id").focus();
+                        return;
+                    }  if ($("#passoword").val().length == 0) {
+                        alert("비밀번호를 입력해주세요");
+                        $("#passoword").focus();
+                        return;
+                    } 
+                }
+            })
+            
+
+            //4번 셋인터벌
+            let img = ["http://marondal.com/material/images/dulumary/web/front/jquery/test06_banner2.jpg",
+                "http://marondal.com/material/images/dulumary/web/front/jquery/test06_banner3.jpg"
+                , "http://marondal.com/material/images/dulumary/web/front/jquery/test06_banner4.jpg" ];
+
+            
+            let num = 0;
+            setInterval(function(){
+
+                
+                $("#mainImg").attr("src", img[num])
+                num ++;
+                if ( num > img.length -1 ) {
+                    num = 0;
+                }
+
+            }, "3000");
+        })
+
+
+    </script>
+</head>
+
+
+<body>
+
+    <div id="kihun">
+        <header>
+
+            <div id="pension_Name"> 
+                <span>통나무 펜션</span>
+
+            </div>
+            <nav class="menu"> 
+                <ul class="nav nav-fill"> 
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" style="color:white" id="nav_self">펜션소개</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" style="color:white" id="nav_look">객실보기</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" style="color:white" id="nav_say">예약안내</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" style="color:white" id="nav_commutiy">커뮤니티</a>
+                    </li>
+                </ul>
+            </nav>
+
+        </header>
+
+
+        <section>
+            <div id="section_body">
+                <img src="http://marondal.com/material/images/dulumary/web/front/jquery/test06_banner1.jpg" id="mainImg" width="1200px">
+               
+
+                
+
+            </div>
+
+            <article id="article">
+                <div id="online">
+                    <span>실시간</span><br>
+                    <sapn>예약 하기</sapn>
+                </div>
+
+                <div id="check">
+
+                    <div>
+                    <span id="check_check">예약 확인</span>
+                    <label for="joinPerson" class="label"> 회원<input type="radio" name="person" value="joinPerson" id="joinPerson" checked></label>
+                    <label for="notjoinPerson" class="label">비회원 <input type="radio" name="person" value="notjoinPerson" id="notjoinPerson"></label>
+                    </div>
+                    <br>
+                    <div class="check_check">
+                    <span id="test10">    　아이디</span> : <input type="text" class="hi form-control" id="id">
+                    </div>
+                    <div class="check_check">
+                    <span id="test11">    비밀번호</span> : <input type="password" class="hi form-control" id="passoword">
+                    <input type="text" class="hi form-control" id="phonenumber">
+                    </div>
+
+                    <div class="check_check" id="date">
+                        　　날짜 : <input type="text" class="hi form-control" id="datebox" >
+                    </div>
+
+                    <div class="check_last">
+                        <button type="button" class="btn btn-success" id="find">조회하기</button>
+                    </div>
+                </div>
+
+                <div id="ask">
+                    <span>예약문의 : <br></span>
+                    010-<br>
+                    4918-5022
+
+                </div>
+
+            </article>
+
+
+        </section>
+
+
+        <footer>
+            <div class="foot">
+                제주특별자치도 제주시 애월읍<br>
+                사업자등록번호: 111-22-255222 / 농어촌민박사업자지정 / 대표 : 김기훈<br>
+                Copyright 2025 tongnamu All right reserved
+
+
+            </div>
+        </footer>
+
+    </div>
+</body>
+
+
+</html>

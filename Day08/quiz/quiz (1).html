@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+
+<html>  
+    <title>iTube</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- 외부 스타일 시트 -->
+    <link rel="stylesheet" type="text/css" href="/Front-End/Day08/quiz/quiz_style (1).css">
+
+
+
+<head>
+
+    <div id = wrap>
+
+
+        <header class="header1">
+            <!-- 로고 -->
+            <div class="title">
+                iTube
+            </div>
+
+            <!-- 검색 -->
+            <div class="test">
+                <div class="input-group mb-3">
+                        <input type="text" class="form-control">
+                        <button class="btn btn-secondary" type="button" id="button-addon2">검색</button>
+                </div>
+            </div>
+
+            <!-- 로그인 정보 -->
+            <div class="test1">
+                <div>
+                    김기훈 
+                    <a href="#self" class="test2">로그아웃</a>
+                </div>
+            </div>
+        </header>
+
+
+        <section>
+            <div class="haha">
+                <div class="section">
+                    <!-- 세로방향으로 메뉴생성시 : nav + flex-column -->
+                    <ul class="nav">
+                        <li class="o1 section_back nav-item">
+                            <a class="o1 nav-link" href="#">추천 동영상</a>
+                        </li>
+
+                        <li class="o1 section_back nav-item">
+                            <a class="o1 nav-link" href="#">탐 색</a>
+                        </li>
+
+                        <li class="o1 section_back nav-item">
+                            <a class="o1 nav-link" href="#">시청기록</a>
+                        </li>
+
+                        <li class="o1 section_back nav-item">
+                            <a class="o1 nav-link" href="#">나중에 볼 동영상</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <aside class="aside">
+                    <div class="aside_sample">
+                        <div class="card">
+                            <img src="http://marondal.com/material/images/dulumary/web/front/bootstrap/test06_thumbnail1.jpg" class="card-img-top" alt="사진1" height="150px" >
+                            <div class="card-body">
+                            <h5 class="card-title">[직캠] 잇츠원 유태양 - ♬ 왕과비</h5>
+                            <p class="card-text">
+                                N-net Ent <br>
+                                조회수 : 80만회 1개월 전    
+                            </p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="http://marondal.com/material/images/dulumary/web/front/bootstrap/test06_thumbnail2.jpg" class="card-img-top" alt="사진1" height="150px">
+                            <div class="card-body">
+                            <h5 class="card-title">[직캠] 아이즈원 권은비 - ♬ Panorma</h5>
+                            <p class="card-text">
+                                N-net Ent <br>
+                                조회수 : 80만회 1개월 전    
+                            </p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="http://marondal.com/material/images/dulumary/web/front/bootstrap/test06_thumbnail3.jpg" class="card-img-top" alt="사진1" height="150px">
+                            <div class="card-body">
+                            <h5 class="card-title">[직캠] 스트레이 키즈 리노 - ♬ 미친놈</h5>
+                            <p class="card-text">
+                                N-net Ent <br>
+                                조회수 : 80만회 1개월 전    
+                            </p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="http://marondal.com/material/images/dulumary/web/front/bootstrap/test06_thumbnail4.jpg" class="card-img-top" alt="사진1" height="150px">
+                            <div class="card-body">
+                            <h5 class="card-title">[직캠] 아이즈원 장원영- ♬ Panorma</h5>
+                            <p class="card-text">
+                                N-net Ent <br>
+                                조회수 : 80만회 1개월 전    
+                            </p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="http://marondal.com/material/images/dulumary/web/front/bootstrap/test06_thumbnail5.jpg" class="card-img-top" alt="사진1" height="150px">
+                            <div class="card-body">
+                            <h5 class="card-title">[직캠] NCT DREAM 제노- ♬ 맛(Hot sauce)</h5>
+                            <p class="card-text">
+                                N-net Ent <br>
+                                조회수 : 80만회 1개월 전    
+                            </p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="http://marondal.com/material/images/dulumary/web/front/bootstrap/test06_thumbnail6.jpg" class="card-img-top" alt="사진1" height="150px">
+                            <div class="card-body">
+                            <h5 class="card-title">[직캠] 아이즈원 마야와키 사쿠라- ♬ Panorma</h5>
+                            <p class="card-text">
+                                N-net Ent <br>
+                                조회수 : 80만회 1개월 전    
+                            </p>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+
+        <footer>
+            <div class="footer">
+                Copyright © kihunzzang 2022
+            </div>
+        </footer>
+
+
+    </div>
+
+</head>
+
+
+
+<body>
+
+
+
+
+
+</body>
+
+
+
+</html>

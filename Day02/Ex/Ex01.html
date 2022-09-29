@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> 테이블 태그 </title>
+</head>
+
+<body>
+    <!-- 테이블 태그 : 표를 만든다 -->
+    <!-- table tr = 행 td = 열 th = 가운데 정렬 종류가 3개 -->
+    <table border="1">
+        <!-- tr은 행 -->
+        <tr>
+            <!-- td는 열 한개생성시 한개  -->
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+
+
+        <!-- 두번 째 행 -->
+        <tr>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+        </tr>
+    </table>
+
+    <!-- 수평선 -->
+    <hr>
+
+
+    <table border="2" width="500px">
+        <thead>
+            <tr>
+                <th>번호 </th>
+                <th>제목</th>
+                <th>글쓴이</th>
+                <th>날짜</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>어린왕자</td>
+                <td>후후</td>
+                <td>2020</td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <td>2</td>
+                <td>나미야어쩌구</td>
+                <td>일본인</td>
+                <td>2022</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <!-- 셀 합치기 -->
+
+
+    <!-- 행 병합할때는 rowspan -->
+    <!-- 병합후 나머지 칸은 제거해야함. -->
+    <h2> 행 병합</h2>
+    <table border="1" width = "200px">
+        <tr>
+            <td rowspan="2"> 1 </td>
+            <td> 2 </td>
+            <td rowspan="2"> 3 </td>
+        </tr>
+
+        <tr>
+            <!-- <td> 4 </td> -->
+            <td> 5 </td>
+            <!-- <td> 6 </td> -->
+        </tr>
+    </table>
+
+    <!-- 열 병합때는 colspan-->
+    <h2>열 병합</h2>
+
+    <table border="1" width="200px">
+        <tr>
+            <td> 1 </td>
+            <!-- 2, 3 열 병합 -->
+            <td colspan="2"> 2 </td>
+            <!-- <td> 3 </td> -->
+        </tr>
+        <tr>
+            <td> 4 </td>
+            <td> 5 </td>
+            <td> 6 </td>
+        </tr>
+        <tr>
+            <!-- 7,8,9 열 병합 -->
+            <td colspan="3"> 7 </td>
+            <!-- <td> 8 </td> -->
+            <!-- <td> 9 </td> -->
+        </tr>
+
+
+    </table>
+
+
+
+
+</body>
+
+</html>

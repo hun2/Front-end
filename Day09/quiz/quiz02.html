@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title> 연습문제 2</title>
+    <script>
+        //1번 반복문을 활용해서 alert 창이 다섯번 뜨게 만드세요.
+        
+        // for ( let i = 0; i <5 ; i++) {
+        //     alert("hi~");
+        // }
+
+        //2번 주어진 배열 요소값들의 합계를 구해서 console에 출력하세요.
+        // 일반 for문, for of, for in 문을 사용해서 세가지 방식으로 모두 풀어보세요.
+
+        let array = [5, 4, 23, 7, 11, 10, 15, 20, 15, 8];
+        let test = 0;
+        let test1 = 0;
+
+        //일반 for문
+        let sample = 0;
+        for ( let i = 0; i < array.length; i++){
+            
+            sample += array[i];
+            
+        }
+        console.log(sample);
+
+        //for of
+        for ( let a of array) {
+            test += a;
+            
+        }
+        console.log(test);
+
+        //for in
+        for ( let b in array) {
+            test1 += array[b];
+        }
+        console.log(test1);
+
+
+        //3번 주어진 dictionary 를 이용해서 화면에 아래와 같이 console에 출력하세요.
+        let goods = {"name": "육개장", "price": 1300, "expirationDate":"2021/07/04"};
+        console.log("제품 :" + goods.name + ", 가격 :"+ goods.price + ", 유통기한 :" + goods.expirationDate);
+
+
+        //4번 맛집 리스트가 아래와 같이 저장되어 있다.
+        //그 중 고기집을 제외한 모든 맛집을 아래와 같이 화면에 출력하세요.
+
+        let restaurantList = [
+            {"name":"토속촌", "menu":"한식", "location":"서울 종로구"}, 
+            {"name":"아이러브떡볶이", "menu":"분식", "location":"서울 중구"}, 
+            {"name":"영동족발", "menu":"고기", "location":"서울 서초구"}, 
+            {"name":"연돈", "menu":"일식", "location":"제주도"}, 
+            {"name":"쿠이", "menu":"양식", "location":"부산"},
+            {"name":"하남돼지집", "menu":"고기", "location":"성남시 분당구"}
+        ];
+
+        for ( let x of restaurantList) {
+
+            if ( x.menu !== "고기") {
+                console.log("상호명 : " + x.name + ", 위치 :"+ x.location);
+            }
+        };
+
+    </script>
+</head>
+
+
+<body>
+
+</body>
+
+</html>
